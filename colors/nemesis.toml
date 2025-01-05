@@ -1,0 +1,46 @@
+#------------------------------------------------------------------------------
+#------------------------------ Nemesis Colorscheme ---------------------------
+#------------------------------------------------------------------------------
+#-  Name: Nemesis                                                             -
+#-  Author: Holairs                                                           -
+#-  Colorscheme based on the Nemesis art cover from the Isaac Asimov's        -
+#-  "Nemesis" book. It's a dark colorscheme with a dark background and        -
+#-  bright colors for the syntax. The colors represent the hues of the        -
+#-  stars depicted on the cover of the book, delivering a visually striking   -
+#-  and immersive experience.                                                 -
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+
+[colors]
+foreground    = "#d3d7de"
+background    = "#0d0d12"
+cursor_fg     = "#0d0d12"
+cursor_bg     = "#d3d7de"
+cursor_border = "#d3d7de"
+selection_fg  = "#d3d7de"
+selection_bg  = "#484f59"
+ansi          = [
+  "#0d0d12", 
+  "#b34040",
+  "#e67e22",
+  "#e67e22",
+  "#5353BA",
+  "#9b59b6",
+  "#3498db",
+  "#d3d7de"
+]
+brights       = [
+  "#484f59",
+  "#b34040",
+  "#e67e22",
+  "#e67e22",
+  "#5353BA",
+  "#9b59b6",
+  "#3498db",
+  "#d3d7de"
+]
+
+[metadata]
+name = "Nemesis"
+author = "Holairs"
