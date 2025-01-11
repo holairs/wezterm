@@ -29,25 +29,30 @@ local config = wezterm.config_builder()
 
 -- Set custom colorscheme directory
 config.color_scheme_dirs = { "~/.config/wezterm/colors" }
-config.color_scheme = "Nemesis" -- Personal Colorscheme
+-- config.color_scheme = "Nemesis" -- Personal Colorscheme
+config.color_scheme = "Zenbones (dark)" -- Personal Colorscheme
+config.colors = {
+	background = "#000000",
+}
 
 -- Font family configuration
 config.font = wezterm.font_with_fallback({
-	{ family = "IBM Plex Mono" }, -- Main font
+	-- { family = "IBM Plex Mono" }, -- Main font
+	{ family = "Victor Mono" }, -- Main font
 	{ family = "Apple Color Emoji" }, -- Fall back to emoji font :)
 })
 
 -- General terminal options
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
-config.macos_window_background_blur = 20
-config.font_size = 18
+config.macos_window_background_blur = 10
+config.font_size = 24
 config.max_fps = 165
 config.line_height = 1.2
 config.window_padding = {
 	left = 0,
 	right = 0,
-	top = 0,
+	top = 33,
 	bottom = 0,
 }
 
@@ -71,7 +76,7 @@ config.keys = {
 			local overrides = window:get_config_overrides() or {}
 			-- Switch between 1.0 (normal) and 0.8 (transparent) opacity
 			if not overrides.window_background_opacity or overrides.window_background_opacity == 1.0 then
-				overrides.window_background_opacity = 0.90 -- Transparent opacity
+				overrides.window_background_opacity = 0.85 -- Transparent opacity
 			else
 				overrides.window_background_opacity = 1.0 -- Normal opacity
 			end
