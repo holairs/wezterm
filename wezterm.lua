@@ -31,14 +31,13 @@ local config = wezterm.config_builder()
 config.color_scheme_dirs = { "~/.config/wezterm/colors" }
 -- config.color_scheme = "Nemesis" -- Personal Colorscheme
 config.color_scheme = "Zenbones (dark)" -- Personal Colorscheme
-config.colors = {
-	background = "#000000",
-}
+-- config.colors = {
+-- 	background = "#000000",
+-- }
 
 -- Font family configuration
 config.font = wezterm.font_with_fallback({
-	-- { family = "IBM Plex Mono" }, -- Main font
-	{ family = "Victor Mono" }, -- Main font
+	{ family = "JetBrains Mono" }, -- Main font
 	{ family = "Apple Color Emoji" }, -- Fall back to emoji font :)
 })
 
@@ -109,10 +108,10 @@ config.keys = {
 	{ key = "z", mods = "CMD", action = "TogglePaneZoomState" },
 
 	-- Resize panes with CMD+SHIFT+HJKL
-	{ key = "h", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Left", 8 } }) },
-	{ key = "j", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Down", 8 } }) },
-	{ key = "k", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Up", 8 } }) },
-	{ key = "l", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Right", 8 } }) },
+	{ key = "h", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Left", 3 } }) },
+	{ key = "j", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Down", 3 } }) },
+	{ key = "k", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Up", 3 } }) },
+	{ key = "l", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Right", 3 } }) },
 }
 
 return config
