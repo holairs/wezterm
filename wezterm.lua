@@ -31,13 +31,13 @@ local config = wezterm.config_builder()
 config.color_scheme_dirs = { "~/.config/wezterm/colors" }
 -- config.color_scheme = "Nemesis" -- Personal Colorscheme
 config.color_scheme = "Zenbones (dark)" -- Personal Colorscheme
--- config.colors = {
--- 	background = "#000000",
--- }
+config.colors = {
+	background = "#000000",
+}
 
 -- Font family configuration
 config.font = wezterm.font_with_fallback({
-	{ family = "JetBrains Mono" }, -- Main font
+	{ family = "IBM Plex Mono" }, -- Main font
 	{ family = "Apple Color Emoji" }, -- Fall back to emoji font :)
 })
 
@@ -45,13 +45,13 @@ config.font = wezterm.font_with_fallback({
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
 config.macos_window_background_blur = 10
-config.font_size = 24
+config.font_size = 26
 config.max_fps = 165
 config.line_height = 1.2
 config.window_padding = {
 	left = 0,
 	right = 0,
-	top = 33,
+	top = 0, -- Or 33 to use with the macbook display
 	bottom = 0,
 }
 
