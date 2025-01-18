@@ -1,0 +1,48 @@
+#------------------------------------------------------------------------------
+#----------------------------- Monochrome Colorscheme -------------------------
+#------------------------------------------------------------------------------
+#-  Name: Monochrome Dark                                                     -
+#-  Author: Holairs                                                           -
+#-  Colorscheme based on the Nemesis art cover from the Isaac Asimov's        -
+#-  "Nemesis" book. It's a dark colorscheme with a dark background and        -
+#-  bright colors for the syntax. The colors represent the hues of the        -
+#-  stars depicted on the cover of the book, delivering a visually striking   -
+#-  and immersive experience.                                                 -
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+
+[colors]
+foreground    = "#eeeeee"  # Gris claro (texto principal)
+background    = "#000000"  # Negro puro (fondo)
+cursor_fg     = "#000000"  # Blanco puro (resaltado del cursor)
+cursor_bg     = "#ffffff"
+cursor_border = "#d3d7de"  # Gris muy claro (borde del cursor)
+selection_fg  = "#ffffff"  # Blanco puro (texto seleccionado)
+selection_bg  = "#505050"  # Gris medio (fondo de selección)
+
+ansi = [
+  "#404040",  # Negro puro (fondo)
+  "#ff0000",  # Rojo brillante (errores, advertencias críticas)
+  "#008000",  # Verde medio (resaltado Git, agregado)
+  "#858585",  # Gris oscuro (comentarios, elementos secundarios)
+  "#505050",  # Gris medio (líneas de división, menos prominentes)
+  "#eeeeee",  # Gris claro (texto principal, destacados)
+  "#d70000",  # Rojo oscuro (advertencias menos críticas, elementos de menor prioridad)
+  "#ffffff"   # Blanco puro (texto resaltado, alto contraste)
+]
+
+brights = [
+  "#404040",  # Negro puro (fondo brillante, si aplica)
+  "#ff3030",  # Rojo vibrante (cambios críticos, muy visible)
+  "#00ff00",  # Verde brillante (confirmaciones exitosas, positivo)
+  "#606060",  # Gris más claro (bordes, elementos muy tenues)
+  "#808080",  # Gris claro (separadores, menos visibles)
+  "#ffffff",  # Blanco puro (resaltado principal)
+  "#d3d7de",  # Gris muy claro (borde del cursor, elementos UI)
+  "#eeeeee"   # Gris claro (texto de alta visibilidad)
+]
+
+[metadata]
+name = "Monochrome Dark"
+author = "Holairs"

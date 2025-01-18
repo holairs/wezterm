@@ -30,7 +30,8 @@ local config = wezterm.config_builder()
 -- Set custom colorscheme directory
 config.color_scheme_dirs = { "~/.config/wezterm/colors" }
 -- config.color_scheme = "Nemesis" -- Personal Colorscheme
-config.color_scheme = "Zenbones (dark)" -- Personal Colorscheme
+-- config.color_scheme = "Zenbones (dark)" -- Personal Colorscheme
+config.color_scheme = "Monochrome Dark" -- Personal Colorscheme
 config.colors = {
 	background = "#000000",
 }
