@@ -12,26 +12,29 @@
 --      `~/.config/wezterm/colors`, providing a unique visual experience.    --
 --                                                                           --
 --  2. **Font Fallback System** - Primary font is `IBM Plex Mono`, with      --
---      `Apple Color Emoji` for emoji rendering.                            --
+--      `Apple Color Emoji` for emoji rendering.                             --
+--      Font Source:                                                         --
+--      https://github.com/IBM/plex/releases/tag/%40ibm%2Fplex-mono%401.1.0  --
 --                                                                           --
 --  3. **Adaptive Transparency** - Dynamic toggling of window transparency   --
 --      with `CMD+B`.                                                        --
 --                                                                           --
 --  4. **Custom Keymaps** - Advanced pane management, fullscreen toggle,     --
---      and resizing controls for seamless workflows.                       --
+--      and resizing controls for seamless workflows.                        --
 --                                                                           --
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 
+-- Local variables
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- Set custom colorscheme directory
 config.color_scheme_dirs = { "~/.config/wezterm/colors" }
--- config.color_scheme = "Nemesis" -- Personal Colorscheme
--- config.color_scheme = "Zenbones (dark)" -- Personal Colorscheme
 config.color_scheme = "Monochrome Dark" -- Personal Colorscheme
+
+-- Set manual background color
 config.colors = {
 	background = "#000000",
 }
@@ -72,7 +75,7 @@ config.keys = {
 	{
 		key = "b",
 		mods = "CMD",
-		action = wezterm.action_callback(function(window, pane)
+		action = wezterm.action_callback(function(window)
 			local overrides = window:get_config_overrides() or {}
 			-- Switch between 1.0 (normal) and 0.8 (transparent) opacity
 			if not overrides.window_background_opacity or overrides.window_background_opacity == 1.0 then
