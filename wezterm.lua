@@ -31,12 +31,14 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- Set custom colorscheme directory
-config.color_scheme_dirs = { "~/.config/wezterm/colors" }
-config.color_scheme = "Monochrome Dark" -- Personal Colorscheme
+-- config.color_scheme_dirs = { "~/.config/wezterm/colors" }
+-- config.color_scheme = "Monochrome Light" -- Personal Colorscheme
+config.color_scheme = "Moonfly (Gogh)"
+-- config.color_scheme = "Gruvbox Dark (Gogh)"
 
 -- Set manual background color
 config.colors = {
-	background = "#000000",
+	background = "#0c0b08",
 }
 
 -- Font family configuration
