@@ -1,0 +1,44 @@
+#------------------------------------------------------------------------------
+#------------------------------ Blossom Colorscheme ---------------------------
+#------------------------------------------------------------------------------
+#-  Name: Blossom                                                             -
+#-  Author: Holairs                                                           -
+#-  Colorscheme inspired by a balanced mix of warm and cool tones, designed   -
+#-  for a visually pleasing and functional coding experience.                 -
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+
+[colors]
+foreground    = "#e2d8c2"  # Sepia (texto principal)
+background    = "#13110e"  # Base (fondo oscuro)
+cursor_fg     = "#0c0b08"  # Crust (fondo del cursor)
+cursor_bg     = "#cc6666"  # Amber (cursor resaltado)
+cursor_border = "#d7af5f"  # Mustard (borde del cursor)
+selection_fg  = "#e2d8c2"  # Sepia (texto seleccionado)
+selection_bg  = "#766e68"  # Silver (fondo de selección)
+
+ansi = [
+  "#221e19",  # Charcoal (Negro puro)
+  "#cc6666",  # Cherry (Rojo oscuro)
+  "#b0bc72",  # Olive (Verde oliva)
+  "#d39b66",  # Peach (Naranja pastel)
+  "#6c99bb",  # Sky (Azul cielo)
+  "#946dbb",  # Grappe (Púrpura apagado)
+  "#668c8d",  # Lagoon (Verde azulado)
+  "#e2d8c2"   # Sepia (Blanco suave)
+]
+
+brights = [
+  "#37302a",  # Surface2 (Negro menos intenso)
+  "#cc6666",  # Cherry (Rojo brillante)
+  "#b0bc72",  # Olive (Verde brillante)
+  "#d7af5f",  # Mustard (Amarillo mostaza)
+  "#6c99bb",  # Sky (Azul brillante)
+  "#8c7cba",  # Lavender (Lavanda suave)
+  "#45707a",  # Sapphire (Azul apagado)
+  "#e2d8c2"   # Sepia (Blanco brillante)
+]
+
+[metadata]
+name = "Blossom"
+author = "Holairs"

@@ -31,20 +31,21 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- Set custom colorscheme directory
--- config.color_scheme_dirs = { "~/.config/wezterm/colors" }
+config.color_scheme_dirs = { "~/.config/wezterm/colors" }
 -- config.color_scheme = "Monochrome Light" -- Personal Colorscheme
-config.color_scheme = "Moonfly (Gogh)"
+-- config.color_scheme = "Moonfly (Gogh)"
 -- config.color_scheme = "Gruvbox Dark (Gogh)"
+config.color_scheme = "Blossom"
 
 -- Set manual background color
-config.colors = {
-	background = "#0c0b08",
-}
+-- config.colors = {
+-- 	background = "#13110e",
+-- }
 
 -- Font family configuration
 config.font = wezterm.font_with_fallback({
-	{ family = "IBM Plex Mono" }, -- Main font
-	{ family = "Apple Color Emoji" }, -- Fall back to emoji font :)
+  { family = "IBM Plex Mono" },    -- Main font
+  { family = "Apple Color Emoji" }, -- Fall back to emoji font :)
 })
 
 -- General terminal options
@@ -55,10 +56,10 @@ config.font_size = 26
 config.max_fps = 165
 config.line_height = 1.2
 config.window_padding = {
-	left = 0,
-	right = 0,
-	top = 0, -- Or 33 to use with the macbook display
-	bottom = 0,
+  left = 0,
+  right = 0,
+  top = 0, -- Or 33 to use with the macbook display
+  bottom = 0,
 }
 
 -- Blinking Block cursor configuration
@@ -73,51 +74,51 @@ config.send_composed_key_when_right_alt_is_pressed = true
 
 -- Keymaps configuration
 config.keys = {
-	-- Toggle transparency with CMD+B
-	{
-		key = "b",
-		mods = "CMD",
-		action = wezterm.action_callback(function(window)
-			local overrides = window:get_config_overrides() or {}
-			-- Switch between 1.0 (normal) and 0.8 (transparent) opacity
-			if not overrides.window_background_opacity or overrides.window_background_opacity == 1.0 then
-				overrides.window_background_opacity = 0.85 -- Transparent opacity
-			else
-				overrides.window_background_opacity = 1.0 -- Normal opacity
-			end
-			window:set_config_overrides(overrides)
-		end),
-	},
+  -- Toggle transparency with CMD+B
+  {
+    key = "b",
+    mods = "CMD",
+    action = wezterm.action_callback(function(window)
+      local overrides = window:get_config_overrides() or {}
+      -- Switch between 1.0 (normal) and 0.8 (transparent) opacity
+      if not overrides.window_background_opacity or overrides.window_background_opacity == 1.0 then
+        overrides.window_background_opacity = 0.85 -- Transparent opacity
+      else
+        overrides.window_background_opacity = 1.0 -- Normal opacity
+      end
+      window:set_config_overrides(overrides)
+    end),
+  },
 
-	-- Toggle fullscreen with CMD+ESC
-	{ key = "Escape", mods = "CMD", action = wezterm.action.ToggleFullScreen },
+  -- Toggle fullscreen with CMD+ESC
+  { key = "Escape", mods = "CMD",         action = wezterm.action.ToggleFullScreen },
 
-	-- Split the pane horizontally with CTRL+SHIFT+O
-	{ key = "p", mods = "CMD", action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
+  -- Split the pane horizontally with CTRL+SHIFT+O
+  { key = "p",      mods = "CMD",         action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
 
-	-- Split the pane vertically with CTRL+SHIFT+P
-	{ key = "o", mods = "CMD", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
+  -- Split the pane vertically with CTRL+SHIFT+P
+  { key = "o",      mods = "CMD",         action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
 
-	-- Enter copy mode with CMD+;
-	{ key = ";", mods = "CMD", action = wezterm.action.ActivateCopyMode },
+  -- Enter copy mode with CMD+;
+  { key = ";",      mods = "CMD",         action = wezterm.action.ActivateCopyMode },
 
-	-- Move between panes with CTRL+SHIFT+HJKL
-	{ key = "h", mods = "CMD", action = wezterm.action({ ActivatePaneDirection = "Left" }) },
-	{ key = "j", mods = "CMD", action = wezterm.action({ ActivatePaneDirection = "Down" }) },
-	{ key = "k", mods = "CMD", action = wezterm.action({ ActivatePaneDirection = "Up" }) },
-	{ key = "l", mods = "CMD", action = wezterm.action({ ActivatePaneDirection = "Right" }) },
+  -- Move between panes with CTRL+SHIFT+HJKL
+  { key = "h",      mods = "CMD",         action = wezterm.action({ ActivatePaneDirection = "Left" }) },
+  { key = "j",      mods = "CMD",         action = wezterm.action({ ActivatePaneDirection = "Down" }) },
+  { key = "k",      mods = "CMD",         action = wezterm.action({ ActivatePaneDirection = "Up" }) },
+  { key = "l",      mods = "CMD",         action = wezterm.action({ ActivatePaneDirection = "Right" }) },
 
-	-- Close the current pane with CMD+X
-	{ key = "x", mods = "CMD", action = wezterm.action({ CloseCurrentPane = { confirm = true } }) },
+  -- Close the current pane with CMD+X
+  { key = "x",      mods = "CMD",         action = wezterm.action({ CloseCurrentPane = { confirm = true } }) },
 
-	-- Toggle pane zoom state with CMD+Z
-	{ key = "z", mods = "CMD", action = "TogglePaneZoomState" },
+  -- Toggle pane zoom state with CMD+Z
+  { key = "z",      mods = "CMD",         action = "TogglePaneZoomState" },
 
-	-- Resize panes with CMD+SHIFT+HJKL
-	{ key = "h", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Left", 3 } }) },
-	{ key = "j", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Down", 3 } }) },
-	{ key = "k", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Up", 3 } }) },
-	{ key = "l", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Right", 3 } }) },
+  -- Resize panes with CMD+SHIFT+HJKL
+  { key = "h",      mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Left", 3 } }) },
+  { key = "j",      mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Down", 3 } }) },
+  { key = "k",      mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Up", 3 } }) },
+  { key = "l",      mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Right", 3 } }) },
 }
 
 return config
