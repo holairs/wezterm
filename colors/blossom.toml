@@ -10,7 +10,7 @@
 
 [colors]
 foreground    = "#e2d8c2"  # Sepia (texto principal)
-background    = "#161410"  # Base (fondo oscuro)
+background    = "#140e08"  # Base (fondo oscuro)
 cursor_fg     = "#0c0b08"  # Crust (fondo del cursor)
 cursor_bg     = "#cc6666"  # Amber (cursor resaltado)
 cursor_border = "#d7af5f"  # Mustard (borde del cursor)
