@@ -1,0 +1,42 @@
+#------------------------------------------------------------------------------
+#------------------------------ Nocturne Colorscheme --------------------------
+#------------------------------------------------------------------------------
+#-  Name: Nocturne                                                            -
+#-  Author: Holairs                                                           -
+#-  Inspired by a minimalistic and retro aesthetic with subtle color accents. -
+#------------------------------------------------------------------------------
+
+[colors]
+foreground    = "#9c9eb4"
+background    = "#000000"
+cursor_fg     = "#000000"
+cursor_bg     = "#ffffff"
+cursor_border = "#8796aa"
+selection_fg  = "#9c9eb4"
+selection_bg  = "#686c7d"
+
+ansi = [
+  "#1e1e1e",  # Graphite (Negro menos puro)
+  "#b07777",  # Blood (Rojo intenso)
+  "#9cac9b",  # Moss (Verde grisáceo)
+  "#96a8ad",  # Sky (Azul grisáceo claro)
+  "#79a0aa",  # Lagoon (Azul verdoso oscuro)
+  "#bc735c",  # Maroon (Marrón rojizo)
+  "#8d9da1",  # Steel (Gris azulado)
+  "#9c9eb4"   # Ash (Blanco suave)
+]
+
+brights = [
+  "#31323c",  # Slate (Gris oscuro para contraste)
+  "#b07777",  # Blood (Rojo brillante)
+  "#9db89c",  # Moss (Verde brillante)
+  "#96a8ad",  # Sky (Azul frío brillante)
+  "#79a0aa",  # Lagoon (Azul verdoso vibrante)
+  "#bc735c",  # Maroon (Marrón cálido)
+  "#8d9da1",  # Steel (Gris metálico frío)
+  "#a6adc3"   # Fog (Blanco frío brillante)
+]
+
+[metadata]
+name = "Nocturne"
+author = "Holairs"

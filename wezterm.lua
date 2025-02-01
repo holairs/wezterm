@@ -31,34 +31,33 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- Set custom colorscheme directory
-config.color_scheme_dirs = { "~/.config/wezterm/colors" }
--- config.color_scheme = "Monochrome Light" -- Personal Colorscheme
--- config.color_scheme = "Moonfly (Gogh)"
--- config.color_scheme = "Gruvbox Dark (Gogh)"
-config.color_scheme = "Blossom"
+-- config.color_scheme_dirs = { "~/.config/wezterm/colors" }
+-- config.color_scheme = "Monochrome Light"
+-- config.color_scheme = "Blossom"
+config.color_scheme = "Nocturne"
 
 -- Set manual background color
--- config.colors = {
--- 	background = "#13110e",
--- }
+config.colors = {
+  background = "#000000",
+}
 
 -- Font family configuration
 config.font = wezterm.font_with_fallback({
-  { family = "IBM Plex Mono" },    -- Main font
+  { family = "IBM Plex Mono" },     -- Main font
   { family = "Apple Color Emoji" }, -- Fall back to emoji font :)
 })
 
 -- General terminal options
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
-config.macos_window_background_blur = 10
-config.font_size = 26
+config.macos_window_background_blur = 7
+config.font_size = 30
 config.max_fps = 165
-config.line_height = 1.2
+config.line_height = 1.1
 config.window_padding = {
   left = 0,
   right = 0,
-  top = 0, -- Or 33 to use with the macbook display
+  top = 33, -- Or 33 to use with the macbook display
   bottom = 0,
 }
 
@@ -82,9 +81,9 @@ config.keys = {
       local overrides = window:get_config_overrides() or {}
       -- Switch between 1.0 (normal) and 0.8 (transparent) opacity
       if not overrides.window_background_opacity or overrides.window_background_opacity == 1.0 then
-        overrides.window_background_opacity = 0.85 -- Transparent opacity
+        overrides.window_background_opacity = 0.80 -- Transparent opacity
       else
-        overrides.window_background_opacity = 1.0 -- Normal opacity
+        overrides.window_background_opacity = 1.0  -- Normal opacity
       end
       window:set_config_overrides(overrides)
     end),
