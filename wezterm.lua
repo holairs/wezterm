@@ -32,14 +32,15 @@ local config = wezterm.config_builder()
 
 -- Set custom colorscheme directory
 -- config.color_scheme_dirs = { "~/.config/wezterm/colors" }
-config.color_scheme = "Monochrome Dark"
+-- config.color_scheme = "Monochrome Dark"
 -- config.color_scheme = "Monochrome Light"
 -- config.color_scheme = "Blossom"
--- config.color_scheme = "Nocturne"
+config.color_scheme = "Nocturne"
 
 -- Set manual background color
 config.colors = {
   background = "000000",
+  -- background = "101010",
 }
 
 -- Font family configuration
@@ -50,7 +51,7 @@ config.font = wezterm.font_with_fallback({
 
 -- General terminal options
 config.enable_tab_bar = false
-config.window_decorations = "RESIZE"
+-- config.window_decorations = "RESIZE"
 config.macos_window_background_blur = 7
 config.font_size = 34
 config.max_fps = 165
