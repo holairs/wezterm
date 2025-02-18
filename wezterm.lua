@@ -35,17 +35,19 @@ local config = wezterm.config_builder()
 -- config.color_scheme = "Monochrome Dark"
 -- config.color_scheme = "Monochrome Light"
 -- config.color_scheme = "Blossom"
+-- config.color_scheme = "Nemesis"
 config.color_scheme = "Nocturne"
 
 -- Set manual background color
 config.colors = {
-  background = "000000",
-  -- background = "101010",
+  -- background = "000000",
+  background = "101010",
 }
 
 -- Font family configuration
 config.font = wezterm.font_with_fallback({
-  { family = "Terminus (TTF)" },    -- Main font
+  -- { family = "Terminus (TTF)" },    -- Main font
+  { family = "Terminess Nerd Font Mono" },    -- Main font
   { family = "Apple Color Emoji" }, -- Fall back to emoji font :)
 })
 
