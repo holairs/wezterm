@@ -1,11 +1,11 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.color_scheme = "Gruvbox Dark (Gogh)"
+config.color_scheme = 'zenwritten_light'
 
-config.colors = {
-	background = "151515",
-}
+-- config.colors = {
+-- 	background = "f0eae0", -- Light
+-- }
 
 config.font = wezterm.font_with_fallback({
 	{
