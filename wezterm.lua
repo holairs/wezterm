@@ -1,11 +1,13 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.color_scheme = 'zenwritten_light'
+-- config.color_scheme = 'zenwritten_dark'
+-- config.color_scheme = 'Rosé Pine (base16)'
+config.color_scheme = 'Rosé Pine (Gogh)'
 
--- config.colors = {
--- 	background = "f0eae0", -- Light
--- }
+config.colors = {
+	background = "000000", -- Light
+}
 
 config.font = wezterm.font_with_fallback({
 	{
