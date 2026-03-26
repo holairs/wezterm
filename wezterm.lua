@@ -1,11 +1,11 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.color_scheme = "zenbones_dark"
+config.color_scheme = "Nemesis"
 
-config.colors = {
-	background = "000000",
-}
+-- config.colors = {
+-- 	background = "000000",
+-- }
 
 config.font = wezterm.font_with_fallback({
 	{
@@ -47,7 +47,7 @@ config.font_rules = {
 -- General terminal options
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
-config.macos_window_background_blur = 3
+config.macos_window_background_blur = 0
 config.font_size = 25
 config.max_fps = 165
 config.line_height = 1.0
@@ -87,7 +87,7 @@ config.keys = {
 	},
 
 	-- Toggle fullscreen with CMD+ESC
-	{ key = "Escape", mods = "CMD", action = wezterm.action.ToggleFullScreen },
+	{ key = "g", mods = "CMD", action = wezterm.action.ToggleFullScreen },
 
 	-- Split the pane horizontally with CTRL+SHIFT+O
 	{
