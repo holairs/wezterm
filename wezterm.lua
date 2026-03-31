@@ -1,15 +1,13 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.color_scheme = "Nemesis"
-
--- config.colors = {
--- 	background = "000000",
--- }
+config.colors = {
+	background = "000000",
+}
 
 config.font = wezterm.font_with_fallback({
 	{
-		family = "IBM Plex Mono",
+		family = "Dank Mono",
 		weight = "Light",
 	},
 	{ family = "Apple Color Emoji" },
@@ -20,7 +18,7 @@ config.font_rules = {
 		intensity = "Bold",
 		italic = false,
 		font = wezterm.font({
-			family = "IBM Plex Mono",
+			family = "Dank Mono",
 			weight = "Regular",
 		}),
 	},
@@ -28,7 +26,7 @@ config.font_rules = {
 		intensity = "Normal",
 		italic = true,
 		font = wezterm.font({
-			family = "IBM Plex Mono",
+			family = "Dank Mono",
 			weight = "Light",
 			style = "Italic",
 		}),
@@ -37,7 +35,7 @@ config.font_rules = {
 		intensity = "Bold",
 		italic = true,
 		font = wezterm.font({
-			family = "IBM Plex Mono",
+			family = "Dank Mono",
 			weight = "Regular",
 			style = "Italic",
 		}),
@@ -47,7 +45,7 @@ config.font_rules = {
 -- General terminal options
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
-config.macos_window_background_blur = 0
+config.macos_window_background_blur = 30
 config.font_size = 25
 config.max_fps = 165
 config.line_height = 1.0
