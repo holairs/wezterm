@@ -1,6 +1,8 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
+config.color_scheme = "Blossom"
+
 config.colors = {
 	background = "000000",
 }
@@ -48,7 +50,7 @@ config.window_decorations = "RESIZE"
 config.macos_window_background_blur = 30
 config.font_size = 25
 config.max_fps = 165
-config.line_height = 1.0
+config.line_height = 1.2
 config.window_padding = {
 	left = 0,
 	right = 0,
@@ -76,7 +78,7 @@ config.keys = {
 			local overrides = window:get_config_overrides() or {}
 			-- Switch between 1.0 (normal) and 0.8 (transparent) opacity
 			if not overrides.window_background_opacity or overrides.window_background_opacity == 1.0 then
-				overrides.window_background_opacity = 0.80 -- Transparent opacity
+				overrides.window_background_opacity = 0.70 -- Transparent opacity
 			else
 				overrides.window_background_opacity = 1.0 -- Normal opacity
 			end
