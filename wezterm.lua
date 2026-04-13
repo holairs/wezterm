@@ -48,7 +48,7 @@ config.font_rules = {
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
 config.macos_window_background_blur = 30
-config.font_size = 25
+config.font_size = 20
 config.max_fps = 165
 config.line_height = 1.2
 config.window_padding = {
@@ -73,7 +73,7 @@ config.keys = {
 	-- Toggle transparency with CMD+B
 	{
 		key = "b",
-		mods = "CMD",
+		mods = "ALT",
 		action = wezterm.action_callback(function(window)
 			local overrides = window:get_config_overrides() or {}
 			-- Switch between 1.0 (normal) and 0.8 (transparent) opacity
@@ -87,45 +87,45 @@ config.keys = {
 	},
 
 	-- Toggle fullscreen with CMD+ESC
-	{ key = "g", mods = "CMD", action = wezterm.action.ToggleFullScreen },
+	{ key = "g", mods = "ALT", action = wezterm.action.ToggleFullScreen },
 
 	-- Split the pane horizontally with CTRL+SHIFT+O
 	{
 		key = "p",
-		mods = "CMD",
+		mods = "ALT",
 		action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }),
 	},
 
 	-- Split the pane vertically with CTRL+SHIFT+P
 	{
 		key = "o",
-		mods = "CMD",
+		mods = "ALT",
 		action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }),
 	},
 
 	-- Enter copy mode with CMD+;
-	{ key = ";", mods = "CMD", action = wezterm.action.ActivateCopyMode },
+	{ key = ";", mods = "ALT", action = wezterm.action.ActivateCopyMode },
 
 	-- Move between panes with CTRL+SHIFT+HJKL
-	{ key = "h", mods = "CMD", action = wezterm.action({ ActivatePaneDirection = "Left" }) },
-	{ key = "j", mods = "CMD", action = wezterm.action({ ActivatePaneDirection = "Down" }) },
-	{ key = "k", mods = "CMD", action = wezterm.action({ ActivatePaneDirection = "Up" }) },
-	{ key = "l", mods = "CMD", action = wezterm.action({ ActivatePaneDirection = "Right" }) },
+	{ key = "h", mods = "ALT", action = wezterm.action({ ActivatePaneDirection = "Left" }) },
+	{ key = "j", mods = "ALT", action = wezterm.action({ ActivatePaneDirection = "Down" }) },
+	{ key = "k", mods = "ALT", action = wezterm.action({ ActivatePaneDirection = "Up" }) },
+	{ key = "l", mods = "ALT", action = wezterm.action({ ActivatePaneDirection = "Right" }) },
 
 	-- Close the current pane with CMD+X
-	{ key = "x", mods = "CMD", action = wezterm.action({ CloseCurrentPane = { confirm = true } }) },
+	{ key = "x", mods = "ALT", action = wezterm.action({ CloseCurrentPane = { confirm = true } }) },
 
 	-- Toggle pane zoom state with CMD+Z
-	{ key = "z", mods = "CMD", action = "TogglePaneZoomState" },
+	{ key = "z", mods = "ALT", action = "TogglePaneZoomState" },
 
 	-- Resize panes with CMD+SHIFT+HJKL
-	{ key = "h", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Left", 3 } }) },
-	{ key = "j", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Down", 3 } }) },
-	{ key = "k", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Up", 3 } }) },
-	{ key = "l", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Right", 3 } }) },
+	{ key = "h", mods = "ALT | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Left", 3 } }) },
+	{ key = "j", mods = "ALT | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Down", 3 } }) },
+	{ key = "k", mods = "ALT | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Up", 3 } }) },
+	{ key = "l", mods = "ALT | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Right", 3 } }) },
 
 	-- Rotate panels
-	{ key = "r", mods = "CMD | SHIFT", action = wezterm.action.PaneSelect({ mode = "SwapWithActive" }) },
+	{ key = "r", mods = "ALT | SHIFT", action = wezterm.action.PaneSelect({ mode = "SwapWithActive" }) },
 }
 
 return config
