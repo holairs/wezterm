@@ -1,0 +1,54 @@
+#------------------------------------------------------------------------------
+#------------------------------- Habamax Colorscheme ---------------------------
+#------------------------------------------------------------------------------
+#-  Name: Habamax                                                              -
+#-  Author: Maxim Kim <habamax@gmail.com>                                      -
+#-  WezTerm port: Ivan Rosales                                                 -
+#-  Description: Classic dark Vim colorscheme with muted tones and high       -
+#-  readability. Direct port of the original Habamax palette.                -
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+
+[colors]
+foreground    = "#c7c7c7"  # Normal fg
+background    = "#1c1c1c"  # Normal bg
+cursor_fg     = "#000000"  # Cursor text
+cursor_bg     = "#dadada"  # Cursor background
+cursor_border = "#dadada"  # Cursor border
+
+selection_fg = "#c7c7c7"   # Visual fg
+selection_bg = "#1a3456"   # Visual bg
+
+scrollbar_thumb = "#585858"
+split           = "#767676"
+
+ansi = [
+  "#1c1c1c",  # black
+  "#af5f5f",  # red (ErrorMsg)
+  "#5faf5f",  # green (String)
+  "#af875f",  # yellow (PreProc)
+  "#5f87af",  # blue (Type)
+  "#af87af",  # magenta (Statement)
+  "#5f8787",  # cyan (Special)
+  "#9e9e9e"   # white (Folded fg)
+]
+
+brights = [
+  "#767676",  # bright black (Comment)
+  "#d75f5f",  # bright red (Removed)
+  "#87d787",  # bright green (Character)
+  "#d7af87",  # bright yellow (Question / WildMenu)
+  "#5fafd7",  # bright blue
+  "#d787d7",  # bright magenta (SpellRare)
+  "#87afaf",  # bright cyan (Identifier)
+  "#c7c7c7"   # bright white (Normal fg)
+]
+
+indexed_colors = [
+  { index = 16, color = "#ff00af" }, # MatchParen
+  { index = 17, color = "#5fd75f" }, # Added
+]
+
+[metadata]
+name   = "Habamax"
+author = "Maxim Kim"

@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.color_scheme = "Blossom"
+config.color_scheme = "Habamax"
 
 config.colors = {
 	background = "000000",
@@ -9,7 +9,7 @@ config.colors = {
 
 config.font = wezterm.font_with_fallback({
 	{
-		family = "Dank Mono",
+		family = "Terminess Nerd Font Mono",
 		weight = "Light",
 	},
 	{ family = "Apple Color Emoji" },
@@ -20,7 +20,7 @@ config.font_rules = {
 		intensity = "Bold",
 		italic = false,
 		font = wezterm.font({
-			family = "Dank Mono",
+			family = "Terminess Nerd Font Mono",
 			weight = "Regular",
 		}),
 	},
@@ -28,7 +28,7 @@ config.font_rules = {
 		intensity = "Normal",
 		italic = true,
 		font = wezterm.font({
-			family = "Dank Mono",
+			family = "Terminess Nerd Font Mono",
 			weight = "Light",
 			style = "Italic",
 		}),
@@ -37,7 +37,7 @@ config.font_rules = {
 		intensity = "Bold",
 		italic = true,
 		font = wezterm.font({
-			family = "Dank Mono",
+			family = "Terminess Nerd Font Mono",
 			weight = "Regular",
 			style = "Italic",
 		}),
