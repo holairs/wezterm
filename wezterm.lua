@@ -9,7 +9,7 @@ config.colors = {
 
 config.font = wezterm.font_with_fallback({
 	{
-		family = "Terminess Nerd Font Mono",
+		family = "Dank Mono",
 		weight = "Light",
 	},
 	{ family = "Apple Color Emoji" },
@@ -20,7 +20,7 @@ config.font_rules = {
 		intensity = "Bold",
 		italic = false,
 		font = wezterm.font({
-			family = "Terminess Nerd Font Mono",
+			family = "Dank Mono",
 			weight = "Regular",
 		}),
 	},
@@ -28,7 +28,7 @@ config.font_rules = {
 		intensity = "Normal",
 		italic = true,
 		font = wezterm.font({
-			family = "Terminess Nerd Font Mono",
+			family = "Dank Mono",
 			weight = "Light",
 			style = "Italic",
 		}),
@@ -37,7 +37,7 @@ config.font_rules = {
 		intensity = "Bold",
 		italic = true,
 		font = wezterm.font({
-			family = "Terminess Nerd Font Mono",
+			family = "Dank Mono",
 			weight = "Regular",
 			style = "Italic",
 		}),
@@ -113,7 +113,7 @@ config.keys = {
 	{ key = "l", mods = "ALT", action = wezterm.action({ ActivatePaneDirection = "Right" }) },
 
 	-- Close the current pane with CMD+X
-	{ key = "x", mods = "ALT", action = wezterm.action({ CloseCurrentPane = { confirm = true } }) },
+	{ key = "w", mods = "ALT", action = wezterm.action({ CloseCurrentPane = { confirm = true } }) },
 
 	-- Toggle pane zoom state with CMD+Z
 	{ key = "z", mods = "ALT", action = "TogglePaneZoomState" },

@@ -11,13 +11,13 @@
 
 [colors]
 foreground    = "#c7c7c7"  # Normal fg
-background    = "#1c1c1c"  # Normal bg
+background    = "#000000"  # Normal bg
 cursor_fg     = "#000000"  # Cursor text
 cursor_bg     = "#dadada"  # Cursor background
 cursor_border = "#dadada"  # Cursor border
 
 selection_fg = "#c7c7c7"   # Visual fg
-selection_bg = "#1a3456"   # Visual bg
+selection_bg = "#5f8787"   # Visual bg
 
 scrollbar_thumb = "#585858"
 split           = "#767676"
@@ -45,8 +45,8 @@ brights = [
 ]
 
 indexed_colors = [
-  { index = 16, color = "#ff00af" }, # MatchParen
-  { index = 17, color = "#5fd75f" }, # Added
+  { index = 16, color = "#d787d7" }, # MatchParen
+  { index = 17, color = "#87d787" }, # Added
 ]
 
 [metadata]
