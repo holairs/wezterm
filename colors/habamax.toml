@@ -1,11 +1,11 @@
 #------------------------------------------------------------------------------
-#------------------------------- Habamax Colorscheme ---------------------------
+#------------------------------- Habamax Colorscheme --------------------------
 #------------------------------------------------------------------------------
-#-  Name: Habamax                                                              -
-#-  Author: Maxim Kim <habamax@gmail.com>                                      -
-#-  WezTerm port: Ivan Rosales                                                 -
+#-  Name: Habamax                                                             -
+#-  Author: Maxim Kim <habamax@gmail.com>                                     -
+#-  WezTerm port: Holairs                                                     -
 #-  Description: Classic dark Vim colorscheme with muted tones and high       -
-#-  readability. Direct port of the original Habamax palette.                -
+#-  readability. Direct port of the original Habamax palette.                 -
 #------------------------------------------------------------------------------
 #------------------------------------------------------------------------------
 

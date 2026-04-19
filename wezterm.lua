@@ -9,7 +9,7 @@ config.colors = {
 
 config.font = wezterm.font_with_fallback({
 	{
-		family = "Dank Mono",
+		family = "BigBlue TerminalPlus",
 		weight = "Light",
 	},
 	{ family = "Apple Color Emoji" },
@@ -20,7 +20,7 @@ config.font_rules = {
 		intensity = "Bold",
 		italic = false,
 		font = wezterm.font({
-			family = "Dank Mono",
+			family = "BigBlue TerminalPlus",
 			weight = "Regular",
 		}),
 	},
@@ -28,7 +28,7 @@ config.font_rules = {
 		intensity = "Normal",
 		italic = true,
 		font = wezterm.font({
-			family = "Dank Mono",
+			family = "BigBlue TerminalPlus",
 			weight = "Light",
 			style = "Italic",
 		}),
@@ -37,7 +37,7 @@ config.font_rules = {
 		intensity = "Bold",
 		italic = true,
 		font = wezterm.font({
-			family = "Dank Mono",
+			family = "BigBlue TerminalPlus",
 			weight = "Regular",
 			style = "Italic",
 		}),
@@ -73,7 +73,7 @@ config.keys = {
 	-- Toggle transparency with CMD+B
 	{
 		key = "b",
-		mods = "ALT",
+		mods = "CMD",
 		action = wezterm.action_callback(function(window)
 			local overrides = window:get_config_overrides() or {}
 			-- Switch between 1.0 (normal) and 0.8 (transparent) opacity
@@ -87,45 +87,45 @@ config.keys = {
 	},
 
 	-- Toggle fullscreen with CMD+ESC
-	{ key = "g", mods = "ALT", action = wezterm.action.ToggleFullScreen },
+	{ key = "g", mods = "CMD", action = wezterm.action.ToggleFullScreen },
 
 	-- Split the pane horizontally with CTRL+SHIFT+O
 	{
 		key = "p",
-		mods = "ALT",
+		mods = "CMD",
 		action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }),
 	},
 
 	-- Split the pane vertically with CTRL+SHIFT+P
 	{
 		key = "o",
-		mods = "ALT",
+		mods = "CMD",
 		action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }),
 	},
 
 	-- Enter copy mode with CMD+;
-	{ key = ";", mods = "ALT", action = wezterm.action.ActivateCopyMode },
+	{ key = ";", mods = "CMD", action = wezterm.action.ActivateCopyMode },
 
 	-- Move between panes with CTRL+SHIFT+HJKL
-	{ key = "h", mods = "ALT", action = wezterm.action({ ActivatePaneDirection = "Left" }) },
-	{ key = "j", mods = "ALT", action = wezterm.action({ ActivatePaneDirection = "Down" }) },
-	{ key = "k", mods = "ALT", action = wezterm.action({ ActivatePaneDirection = "Up" }) },
-	{ key = "l", mods = "ALT", action = wezterm.action({ ActivatePaneDirection = "Right" }) },
+	{ key = "h", mods = "CMD", action = wezterm.action({ ActivatePaneDirection = "Left" }) },
+	{ key = "j", mods = "CMD", action = wezterm.action({ ActivatePaneDirection = "Down" }) },
+	{ key = "k", mods = "CMD", action = wezterm.action({ ActivatePaneDirection = "Up" }) },
+	{ key = "l", mods = "CMD", action = wezterm.action({ ActivatePaneDirection = "Right" }) },
 
 	-- Close the current pane with CMD+X
-	{ key = "w", mods = "ALT", action = wezterm.action({ CloseCurrentPane = { confirm = true } }) },
+	{ key = "w", mods = "CMD", action = wezterm.action({ CloseCurrentPane = { confirm = true } }) },
 
 	-- Toggle pane zoom state with CMD+Z
-	{ key = "z", mods = "ALT", action = "TogglePaneZoomState" },
+	{ key = "z", mods = "CMD", action = "TogglePaneZoomState" },
 
 	-- Resize panes with CMD+SHIFT+HJKL
-	{ key = "h", mods = "ALT | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Left", 3 } }) },
-	{ key = "j", mods = "ALT | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Down", 3 } }) },
-	{ key = "k", mods = "ALT | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Up", 3 } }) },
-	{ key = "l", mods = "ALT | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Right", 3 } }) },
+	{ key = "h", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Left", 3 } }) },
+	{ key = "j", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Down", 3 } }) },
+	{ key = "k", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Up", 3 } }) },
+	{ key = "l", mods = "CMD | SHIFT", action = wezterm.action({ AdjustPaneSize = { "Right", 3 } }) },
 
 	-- Rotate panels
-	{ key = "r", mods = "ALT | SHIFT", action = wezterm.action.PaneSelect({ mode = "SwapWithActive" }) },
+	{ key = "r", mods = "CMD | SHIFT", action = wezterm.action.PaneSelect({ mode = "SwapWithActive" }) },
 }
 
 return config
