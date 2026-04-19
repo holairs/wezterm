@@ -46,15 +46,15 @@ config.font_rules = {
 
 -- General terminal options
 config.enable_tab_bar = false
-config.window_decorations = "RESIZE"
-config.macos_window_background_blur = 30
-config.font_size = 20
+config.window_background_opacity = 0.80
+config.window_decorations = "NONE"
+config.font_size = 18
 config.max_fps = 165
 config.line_height = 1.2
 config.window_padding = {
 	left = 0,
 	right = 0,
-	top = 0, -- Or 33 to use with the macbook display
+	top = 0,
 	bottom = 0,
 }
 
@@ -63,10 +63,6 @@ config.default_cursor_style = "BlinkingBlock"
 config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
 config.cursor_blink_rate = 300 -- Miliseconds
-
--- Configuración adicional para teclas `Option` en macOS
-config.send_composed_key_when_left_alt_is_pressed = true
-config.send_composed_key_when_right_alt_is_pressed = true
 
 -- Keymaps configuration
 config.keys = {
@@ -78,7 +74,7 @@ config.keys = {
 			local overrides = window:get_config_overrides() or {}
 			-- Switch between 1.0 (normal) and 0.8 (transparent) opacity
 			if not overrides.window_background_opacity or overrides.window_background_opacity == 1.0 then
-				overrides.window_background_opacity = 0.70 -- Transparent opacity
+				overrides.window_background_opacity = 0.80 -- Transparent opacity
 			else
 				overrides.window_background_opacity = 1.0 -- Normal opacity
 			end
